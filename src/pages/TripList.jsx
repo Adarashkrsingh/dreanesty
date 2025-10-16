@@ -17,7 +17,7 @@ const TripList = () => {
   const getTripList = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3002/users/${userId}/trips`,
+        `https://dreamnestserver-1.onrender.com/users/${userId}/trips`,
         {
           method: "GET",
         }
