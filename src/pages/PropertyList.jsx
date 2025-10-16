@@ -17,7 +17,7 @@ const PropertyList = () => {
     if (!user?._id) return;
 
     try {
-      const response = await fetch(`http://localhost:3002/users/${user._id}/properties`);
+      const response = await fetch(`https://dreamnestserver-1.onrender.com/users/${user._id}/properties`);
       if (!response.ok) throw new Error("Failed to fetch properties");
 
       const data = await response.json();
