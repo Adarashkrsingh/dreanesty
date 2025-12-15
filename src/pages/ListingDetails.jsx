@@ -20,7 +20,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `https://dreamnestserver-1.onrender.com/properties/${listingId}`,
+        `https://dreamnestserver-2.onrender.com/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -75,7 +75,7 @@ const ListingDetails = () => {
         totalPrice: listing.price * dayCount,
       }
 
-      const response = await fetch("https://dreamnestserver-1.onrender.com/bookings/create", {
+      const response = await fetch("https://dreamnestserver-2.onrender.com/bookings/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -106,7 +106,7 @@ const ListingDetails = () => {
         <div className="photos">
           {listing.listingPhotoPaths?.map((item) => (
             <img
-              src={`https://dreamnestserver-1.onrender.com/${item.replace("public", "")}`}
+              src={`https://dreamnestserver-2.onrender.com/${item.replace("public", "")}`}
               alt="listing photo"
             />
           ))}
@@ -124,7 +124,7 @@ const ListingDetails = () => {
 
         <div className="profile">
           <img
-            src={`https://dreamnestserver-1.onrender.com/${listing.creator.profileImagePath.replace(
+            src={`https://dreamnestserver-2.onrender.com/${listing.creator.profileImagePath.replace(
               "public",
               ""
             )}`}
