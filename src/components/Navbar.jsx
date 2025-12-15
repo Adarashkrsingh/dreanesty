@@ -60,7 +60,7 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-              src={`https://dreamnestserver-1.onrender.com/${user.profileImagePath.replace(
+              src={`https://dreamnestserver-2.onrender.com/${user.profileImagePath.replace(
                 "public",
                 ""
               )}`}
